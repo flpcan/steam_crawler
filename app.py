@@ -12,7 +12,8 @@ try:
     search_price = driver.find_element_by_class_name('market_commodity_order_summary')
     outer_name = search_name.get_attribute("innerHTML")
     price_name = search_price.get_attribute("textContent")
-    print(outer_name, price_name)
+    price = price_name.split()
+    print(outer_name, price[-1])
 
 
 finally:
