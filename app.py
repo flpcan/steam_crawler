@@ -15,6 +15,8 @@ for line in csv_reader:
     driver.get(url)
 
     try:
+        #Add more sleep and wont block the requests
+        
         time.sleep(1)
         search_name = driver.find_element_by_id("largeiteminfo_item_name")
         search_price = driver.find_element_by_class_name('market_commodity_order_summary')
